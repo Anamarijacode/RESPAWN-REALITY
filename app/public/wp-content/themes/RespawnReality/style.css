@@ -1,0 +1,504 @@
+/*
+Theme Name: Respawn Reality
+Theme URI: http://localhost/respawnReality
+Description: 
+Author: Anamarija Bošnjak
+Author URI: 
+Version: 1.0.0
+*/
+
+/* Globalni stil */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap'); /* Modern futuristic font */
+
+/* Poboljšanje pozadine i kontrasta za tekst */
+body {
+    background-color: #1e1e1e; /* Svjetlija pozadina za bolji kontrast */
+    color: #f1f1f1; /* Svjetliji tekst */
+    font-family: 'Orbitron', sans-serif; /* Moderni font za tekst */
+    background-image: radial-gradient(circle at center, #121212, #1e1e1e); /* Lagana gradacija pozadine */
+    line-height: 1.8; /* Povećaj razmak između redaka */
+    -webkit-text-size-adjust: 100%; /* Sprječava automatsku prilagodbu teksta na mobilnim uređajima */
+    text-size-adjust: 100%;
+}
+.hero-section {
+    margin-top: 15px;
+    background: url('console.png') no-repeat center center;
+    background-size: contain; /* Slika će ostati proporcionalna */
+    height: 60vh; /* Visina sekcije */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; 
+    padding: 0 10px; 
+    box-sizing: border-box;
+ 
+}
+
+
+.hero-section h1 {
+    font-size: 55px; /* Fiksna veličina fonta */
+    margin: 0;
+    line-height: 1.2; /* Razmak između linija */
+    max-width: 90%; /* Tekst će biti ograničen u širini */
+}
+
+.hero-section button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    margin-top: 10px;
+}
+@media (min-width: 1200px) 
+{
+  
+    .hero-section h1 {
+        font-size: 2.5rem; /* Smanjena veličina fonta */
+        max-width: 100%; /* Tekst ne prelazi širinu ekrana */
+        word-break: break-word; /* Omogućava prelom reči ako je potrebno */
+    }
+
+    .hero-section button {
+        font-size: 0.9rem; /* Smanjena veličina dugmeta */
+        padding: 6px 10px;
+    }
+  }
+@media (max-width: 992px) 
+{
+    .hero-section {
+        height: 40vh; /* Smanjena visina sekcije */
+        padding: 0 5%; /* Veći padding za mobilne uređaje */
+    }
+
+    .hero-section h1 {
+        font-size: 1rem; /* Smanjena veličina fonta */
+        max-width: 100%; /* Tekst ne prelazi širinu ekrana */
+        word-break: break-word; /* Omogućava prelom reči ako je potrebno */
+    }
+
+    .hero-section button {
+        font-size: 0.9rem; /* Smanjena veličina dugmeta */
+        padding: 6px 10px;
+    }
+  }
+/* Prilagodba za mobilne uređaje */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 40vh; /* Smanjena visina sekcije */
+        padding: 0 5%; /* Veći padding za mobilne uređaje */
+    }
+
+    .hero-section h1 {
+        font-size: 1rem; /* Smanjena veličina fonta */
+        max-width: 100%; /* Tekst ne prelazi širinu ekrana */
+        word-break: break-word; /* Omogućava prelom reči ako je potrebno */
+    }
+
+    .hero-section button {
+        font-size: 0.9rem; /* Smanjena veličina dugmeta */
+        padding: 6px 10px;
+    }
+}
+
+.comment-form-comment {
+    display: flex;
+    flex-direction: column;
+}
+/* Poboljšanje tekstova */
+h1, h2, h3, p, li {
+    color: #f1f1f1; /* Svjetliji tekst */
+    font-family: 'Orbitron', sans-serif; /* Moderni font za bolje čitanje */
+    font-size: 1.2rem; /* Malo veći font za bolje čitanje */
+    line-height: 1.6;
+}
+
+/* Svjetliji kontrast za kartice i tekst */
+
+/* Improved Text Styling */
+h1, h2, h3 {
+    color: #eeeeee;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for headings */
+    letter-spacing: 2px; /* Add space between letters for a sleek look */
+}
+
+/* General Text Styles */
+li, span {
+    font-family: 'Orbitron', sans-serif; /* Modern clean font for paragraphs */
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    color: #eeeeee; /* Soft white color for readability */
+    
+    line-height: 1.8; /* Increase line spacing for better readability */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+p
+{
+    font-family: 'Orbitron', sans-serif; /* Modern clean font for paragraphs */
+    font-size: 15px; /* Slightly larger text for better readability */
+    color: #eeeeee; /* Soft white color for readability */
+    line-height: 1.8; /* Increase line spacing for better readability */
+    /*transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;*/
+}
+
+/* Hover Effect for Text */
+li:hover, span:hover {
+    color: #eeeeee; /* Light blue hover effect */
+    /*text-shadow: 0 0 5px #33ccff, 0 0 10px #00ff99; /* Stronger neon glow on hover */
+}
+
+/* Neon Effects for Text */
+.text-neon {
+    color: #00ffff; /* Light cyan */
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ff99, 0 0 30px #00ccff;
+}
+
+/* Animacija za tekst */
+@keyframes neon-flicker {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff33ff, 0 0 15px #00ff99, 0 0 20px #9900ff;
+    }
+    50% {
+        text-shadow: 0 0 3px #00ffff, 0 0 10px #33ccff, 0 0 15px #ff66ff;
+    }
+}
+
+
+.display-1, .objava
+{
+    animation: neon-flicker 1.5s infinite alternate;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+/* Navbar Styling */
+.navbar-nav {
+    list-style-type: none;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    display: block;
+    font-size: 1rem;
+    color: #ffffff; /* Default link color */
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #33ccff; /* Light neon glow */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover Effect for Navbar Links */
+.navbar-nav .nav-link:hover {
+    color: #ff66ff; /* Pinkish color on hover */
+    text-shadow: 0 0 15px #ff66ff, 0 0 25px #ff99cc, 0 0 35px #ff33ff; /* Stronger neon effect */
+    background-color: transparent; /* No background on hover */
+}
+/* Stilizacija dropdown menija */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    background-color: #1e1e1e;
+    z-index: 999;
+    padding: 10px 0;
+    min-width: 200px;
+    white-space: nowrap;
+}
+
+/* Hover za desktop */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Podmeni stil */
+.navbar-nav .dropdown-menu .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    background-color: #1e1e1e;
+    border: 1px solid #3399ff;
+    min-width: 200px;
+    z-index: 999;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Prebacivanje podmenija lijevo */
+.navbar-nav .dropdown-menu .dropdown-menu.left-side {
+    left: auto;
+    right: 100%;
+}
+
+/* Stil za dropdown iteme */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #3399ff;
+    color: #000000;
+    text-shadow: 0 0 5px #66ccff, 0 0 10px #3399ff;
+}
+
+/* Media query za mobilne uređaje */
+@media (max-width: 768px) {
+    .navbar-nav .dropdown-menu {
+        position: static;
+        display: none; /* Dropdown se ne prikazuje po defaultu */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    .nav-item.dropdown > .dropdown-menu {
+        display: none; /* Skriva se dok ne kliknemo */
+    }
+
+    .nav-item.dropdown.open > .dropdown-menu {
+        display: block; /* Prikaz dropdowna kad je otvoren */
+    }
+}
+
+
+.card {
+    background-color: #1e1e1e;
+    border: 2px solid #3399ff; /* Plavi border */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(51, 153, 255, 0.6);
+    border: 2px solid #66ccff;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #66ccff; /* Svijetlo plava boja za naslove kartica */
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+/* Stil za dugmadi */
+.btn-primary {
+    background-color: #3399ff; /* Plava boja */
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px #3399ff, 0 0 15px #66ccff;
+}
+
+/* Hover efekti za dugmadi */
+.btn-primary:hover {
+    background-color: #66ccff; /* Plavi hover efekt */
+    color: #000000;
+    box-shadow: 0 0 20px #66ccff, 0 0 30px #3399ff;
+}
+
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    border-top: 2px solid #008cff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Footer Links */
+footer a {
+    color: #00ccff; /* Light cyan */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #33ff99; /* Neon green */
+}
+
+/* General Link Styles */
+a {
+    color: #669cff; /* Neon pink */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #00ff99; /* Neon green */
+}
+/* General Form Styling */
+.scf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(45deg, #1e1e1e, #121212); /* Gradient background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.scf-form {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    border: 2px solid #3399ff;
+    box-shadow: 0 0 10px #33ccff, 0 0 20px #00ffff;
+    width: 100%;
+    max-width: 500px;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+#comment
+{
+    background-color: #333;
+    color: #fff;
+}
+.scf-label {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.scf-input, .scf-textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #333;
+    border: 1px solid #3399ff;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.scf-input:focus, .scf-textarea:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 5px #00ffff;
+}
+
+.scf-submit {
+    background-color: #3399ff;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #3399ff, 0 0 15px #66ccff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.scf-submit:hover {
+    background-color: #66ccff;
+    box-shadow: 0 0 20px #66ccff, 0 0 30px #3399ff;
+}
+
+.scf-thank-you-message {
+    color: #00ffff;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+.rating-stars .star {
+    font-size: 24px;
+    color: #ccc; /* Siva boja za neaktivne zvjezdice */
+    cursor: pointer;
+}
+
+.rating-stars .star.active {
+    color: gold; /* Zlatna boja za aktivne zvjezdice */
+}
+/* Stilizacija zvjezdica */
+.rating-stars .star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-stars .star.active {
+    color: gold;
+}
+
+.comment-form-rating {
+    margin-bottom: 20px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list .comment {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #211f1f;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+.comment-list .comment .comment-author {
+    font-weight: bold;
+}
+
+.comment-list .comment .comment-meta {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.comment-rating {
+    font-size: 1.2em;
+    color: gold;
+}
+ 
+
+/* Neon Flicker Animation */
+@keyframes neon-flicker {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff33ff, 0 0 15px #00ff99, 0 0 20px #9900ff;
+    }
+    50% {
+        text-shadow: 0 0 3px #00ffff, 0 0 10px #33ccff, 0 0 15px #ff66ff;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .scf-container {
+        padding: 10px;
+    }
+
+    .scf-form {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .scf-submit {
+        width: 100%;
+        padding: 12px;
+    }
+}

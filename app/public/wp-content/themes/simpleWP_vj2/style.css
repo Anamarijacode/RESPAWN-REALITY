@@ -1,0 +1,144 @@
+/*
+Theme Name: Respawn Reality
+Theme URI: http://localhost/respawnReality
+Description: Tema izrađena za blog o video igrama
+Author: Anamarija Bošnjak
+Author URI: 
+Version: 1.0.0
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8f098f;
+    color: #632828;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #472222;
+    margin: 0 0 15px;
+}
+
+a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005177;
+}
+
+/* Osnovni izgled navigacije */
+.navbar {
+    background-color: #9c1717;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    color: #af5d5d;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.main-menu-container {
+    display: flex;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.main-menu li a {
+    color: #7c3a3a;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-menu li a:hover {
+    background-color: #470c0c;
+    color: #fff;
+}
+
+/* Stilizacija podizbornika */
+.main-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4b1414;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 200px;
+}
+
+.main-menu li:hover > ul {
+    display: block;
+}
+
+.main-menu li ul li {
+    width: 100%;
+}
+
+.main-menu li ul li a {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #be1212;
+    transition: background-color 0.3s ease;
+}
+
+.main-menu li ul li a:hover {
+    background-color: #7a0f0f;
+}
+
+/* Stilizacija za više razine podizbornika */
+.main-menu li ul li ul {
+    left: 100%;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    /* Stilizacija za mobilne uređaje */
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-menu li {
+        margin: 0;
+    }
+
+    .main-menu li ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
